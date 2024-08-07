@@ -6,7 +6,13 @@
  * 3. After the loop, log out the total number of
  *    hobbies
  */
-
+let myHobbies = ['basketball', 'swimming', 'cooking', 'painting'];
+     let totalHobbies = 0 
+     for(let count =0 ; count <= myHobbies.length - 1; count += 1) {
+          console.log(myHobbies[count]);
+          totalHobbies++
+     }
+     console.log(totalHobbies)
 
 // Example output
 // 1. swimming
@@ -25,6 +31,17 @@
  * 4. Output the array and number of times teal was found
  */
 
+let colorArray = ['blue', 'pink', 'green', 'teal'];
+console.log(colorArray);
+
+let tealCount = 0;
+for (let count = 0; count < colorArray.length; count += 1) {
+    console.log(colorArray[count]);
+    if (colorArray[count] === 'teal') {
+        tealCount++;
+    }
+}
+console.log(tealCount);
 
 // Example output
 // green, red, teal, orange, teal
@@ -40,6 +57,24 @@
  *    array and even numbers in the evenNumbers array.
  * 4. Output the original array, odd number array and even number array
  */
+
+let numbers = ['2', '3', '4', '5', '6'];
+console.log(numbers);
+
+let oddNumbers = ['0'];
+let evenNumbers = ['0'];
+
+for (let count =0; count < numbers.length; count +=1) {
+     console.log(numbers[count]);
+     if (numbers[count] % 2 === 0) {
+          evenNumbers.push(numbers[count]);
+     } else {
+          oddNumbers.push(numbers[count]);
+     }    
+}
+console.log(numbers)
+console.log(oddNumbers)
+console.log(evenNumbers)
 
 
 // Example output
@@ -57,6 +92,17 @@
  * 4. Output both arrays
  */
 
+let values = ['true', 'true', 'false', 'false'];
+let toggled = ['0']
+
+for (let count = 0; count < values.length; count += 1) {
+     console.log(values[count]);
+     if (values[count] === 'true') {
+         toggled++;
+     }
+ }
+ console.log(toggled);
+//not sure how to do this one. did not learn about toggles?
 
 // Example output
 // true, false, true, true
@@ -74,6 +120,13 @@
  *
  * Hint: Try using a while loop for this one.
  */
+let arrayOfNumbers = ['1', '2', '3', '0', '0', '0']
+while (arrayOfNumbers[arrayOfNumbers.length -1] ===0){
+     arrayOfNumbers.pop();
+} 
+
+console.log(arrayOfNumbers);
+
 
 
 // Example output
@@ -90,7 +143,21 @@
       and lowest numbers.
  * 3. Log the highest and lowest number to the console
  */
+ let largeArrayOfNumbers = ['2', '2', '-3', '7', '4', '1', '7', '12', '8']
+let high = largeArrayOfNumbers [0];
+let low = largeArrayOfNumbers [0];
 
+for (let count =1; count <largeArrayOfNumbers.length; count++) {
+     if(largeArrayOfNumbers[count] > high) {
+          high = largeArrayOfNumbers[count];
+     }
+          if (largeArrayOfNumbers[count] < low) {
+               low = largeArrayOfNumbers[count];
+          }
+     }
+console.log(largeArrayOfNumbers);
+console.log(high);
+console.log(low);
 
 // Example output
 // 2, 2, -3, 7, 4, 1, 7, 12, 8
